@@ -1,0 +1,36 @@
+table{
+    border: 1px solid black;
+}
+th{
+    border: 1px solid black;
+    text-align: center;
+}
+td{
+  
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+h3{
+    text-align: center;
+    border: 1px solid black;
+    width: 300px;
+    margin: 0 auto;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+}
+.buy{
+    color: whitesmoke;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    padding-inline: .5rem;
+    max-width: 3rem;
+    margin: .7rem auto;
+}
+.no-border{
+    border: none;
+    border-bottom: 1px solid black;
+}

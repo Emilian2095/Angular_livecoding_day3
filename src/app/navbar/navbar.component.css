@@ -1,0 +1,24 @@
+.navbar{
+    background-color: black;
+}
+.top{
+    display: flex;
+    padding-inline: .5rem;
+    font-weight: bold;
+
+}
+a{
+    display: flex;
+    align-items: center;
+    margin-inline: 1rem;
+}
+.nav-link{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding-inline: .5rem;
+
+}
+span{
+    color: whitesmoke;
+    border-bottom: 5px double whitesmoke;
+}

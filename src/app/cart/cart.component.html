@@ -1,0 +1,42 @@
+<table class="table table-striped table-hover my-5">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th class="no-border"></th>
+    <th>Qtty</th>
+    <th class="no-border"></th>
+    <th class="no-border"></th>
+    <th>Price</th>
+    <th>subtotal</th>
+  </tr>
+  @for (pet of petsFromCart; track $index) {
+  <tr>
+    <th>{{ $index }}</th>
+    <td>{{ pet.name }}</td>
+    <td><img style="width: 100px" [src]="pet.img" alt="" /></td>
+    <td>
+      <button (click)="increaseQtty($index)" class="btn btn-success bg-success">
+        +
+      </button>
+    </td>
+    <td>{{ pet.qtty }}</td>
+    <td>
+      <button (click)="decreaseQtty($index)" class="btn btn-warning bg-warning">
+        -
+      </button>
+    </td>
+    <td>
+      <button (click)="deleteTotal($index)" class="btn btn-danger bg-danger">
+        X
+      </button>
+    </td>
+    <th>{{ pet.price }}</th>
+    <td>{{ pet.price * pet.qtty | currency : "EUR" }}</td>
+  </tr>
+  }
+</table>
+<div class="total">
+  <h3>Total Price: {{ total | currency : "EUR" }}</h3>
+  <button class="buy">Buy</button>
+</div>

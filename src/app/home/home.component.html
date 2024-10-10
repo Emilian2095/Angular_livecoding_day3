@@ -1,0 +1,29 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+  @for (pet of pets; track $index) {
+  <div class="container">
+    <div class="card">
+      <img [src]="pet.img" class="card-img-top" alt="image of {{ pet.name }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ pet.name }}</h5>
+        <p class="card-text">Price: {{ pet.price | currency : "EUR" }}</p>
+        <div style="display: flex; justify-content: space-between">
+          <a
+            style="margin-inline: 1rem"
+            routerLink="/details/{{ $index }}"
+            class="btn btn-primary button"
+          >
+            Details
+          </a>
+          <a
+            (click)="addToCart(pet)"
+            style="margin-inline: 1rem"
+            class="btn btn-success button"
+          >
+            Add to Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
